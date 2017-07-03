@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Entrega P1, AP - 2015 N1A - Hernán de Soto - 207472</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="javascript/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="javascript/codigoObligatorio.js"></script>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div class="cabezal clearfix">
+            <img id="logo" src="images/LogoOriginal.png" alt="logo">
+            <div id="divLoginRegistro">
+                <a href="javascript:void(0);" alt="Login">Login</a> | <a href="javascript:void(0);" alt="Registro">Registro</a>
+            </div>
+            <div id="divUsuarioActivo" class='hidden'>
+            </div>
+        </div>
+        <div id="contenido-lateral">
+
+            <!------------ CONTENIDO ------------------>
+            <div id="contenido">
+                <div id="divReportes" class='hidden'></div>
+                <div id="divBuscarProducto">
+                    <center>
+                        <label>Buscar por Código: </label>
+                        <input type="text" id="txtBuscarPorCodigo" />
+                        <input type="button" id="btnBuscarPorCodigo" value="Buscar" />
+                        <input type="button" id="btnCancelarBuscar" value="Cancelar" />
+                    </center>
+                </div>
+                <br>
+                <div id="divOrdenarProductos">
+                    <center>
+                        <label>Ordenar el listado de productos:</label>
+                        <input type="button" id="btnNombreAscendente" value="A-Z" />
+                        <input type="button" id="btnNombreDescendente" value="Z-A" />
+                        <input type="button" id="btnPrecioAscendente" value="$-$$" />
+                        <input type="button" id="btnPrecioDescendente" value="$$-$" />
+                    </center>
+                </div>
+                <br>
+                <div id="productos">
+                </div>
+            </div>
+
+            <!------------ LATERAL ------------------>
+            <div id="lateral">
+                <div id="divLogin" class="hidden">
+                    <h3>Login</h3>
+                    <label class="labelLogin">Usuario:</label>
+                    <input type="text" id="txtLoginNombre" />
+                    <br>
+                    <label class="labelLogin">Password:</label>
+                    <input type="password" id="txtLoginClave" />
+                    <br>
+                    <input type="button" value="Ingresar" id="btnLogin" />
+                    <input type="button" class="botonCancelar" value="Cancelar" id="btnCancelarLogin" alt="Login" />
+                    <div id="divLoginMensaje"></div>
+                </div>
+
+                <div id="divRegistro" class="hidden">
+                    <h3>-Registro-</h3>
+                    <label>Usuario:</label>
+                    <input type="text" id="txtRegistroNombre" />
+                    <br>
+                    <label>Password:</label>
+                    <input type="password" id="txtRegistroClave" />
+                    <br>
+                    <label>Nombre Completo:</label>
+                    <input type="text" id="txtRegistroNombreCompleto" />
+                    <br>
+                    <label>E-mail:</label>
+                    <input type="email" id="txtRegistroMail" />
+                    <br>
+                    <input type="button" value="Registrar" alt="Registro" id="btnRegistrar" />
+                    <input type="button" value="Cancelar" id="btnCancelarRegistro" class="botonCancelar" alt="Registro" />
+
+                    <div id="divRegistroMensaje"></div>
+                </div>
+
+                <div id="divAdmin" class="hidden">
+                    <div id="divOpcionesAdmin" class="hidden">
+                        <center>
+                            <h1>AREA ADMINISTRADOR</h1>
+                            <input type="button" value="Alta de Productos" id="btnAltaProductos" class="botonAdmin" alt="CargaProductos" />
+                            <br>
+                            <input type="button" value="Reporte de pedidos ingresados" id="btnReportePedidos" class="botonAdmin" alt="ReportePedidos" />
+                            <br>
+                            <input type="button" value="Reporte de Usuarios Registrados" id="btnReporteUsuarios" class="botonAdmin" alt="ReporteUsuarios" />
+                            <br>
+                            <input type="button" value="Cerrar Sesión Administrador" id="btnCerrarSesionAdmin" class="botonLogout" alt="Admin" />
+                        </center>
+                    </div>
+                    <div id="divCargaProductos" class="hidden">
+                        <center>
+                            <h1>CARGA DE PRODUCTO NUEVO</h1>
+                            <label>Código:</label>
+                            <input type="text" id="txtProductoCodigo" class="campoTexto">
+                            <br>
+                            <label>Nombre:</label>
+                            <input type="text" id="txtProductoNombre" class="campoTexto">
+                            <br>
+                            <label>Descripción:</label>
+                            <input type="text" id="txtProductoDescripcion" class="campoTexto">
+                            <br>
+                            <label>Precio:</label>
+                            <input type="text" id="txtProductoPrecio" class="campoTexto">
+                            <br>
+                            <label>Foto:</label>
+                            <input type="file" id="inputFoto" />
+                            <img id="imgSeleccionada" src="#" width="100px" height="100px" alt="imagen" />
+                            <br>
+                            <input type="button" value="Grabar Producto" id="btnGrabarProducto" />
+                            <input type="button" value="Cancelar" id="btnCancelarProducto" class="btnCancelarAdmin" />
+                            <div id="divErrorCarga"></div>
+                        </center>
+                    </div>
+                    <div id="divReportePedidos" class="hidden">
+                        <center>
+                            <h1>REPORTE DE PEDIDOS</h1>
+                            <input type="button" value="Cerrar Reporte" id="btnCancelarReportePedido" class="btnCancelarAdmin" />
+                        </center>
+                    </div>
+                    <div id="divReporteUsuarios" class="hidden">
+                        <center>
+                            <h1>REPORTE DE USUARIOS</h1>
+                            <input type="button" value="Cerrar Reporte" id="btnCancelarReporteUsuarios" class="btnCancelarAdmin" />
+                        </center>
+                    </div>
+                </div>
+                <div id="divUsuario" class="hidden">
+                    <div id="divCarrito">
+                        <h1>Carrito</h1>
+                        <div id="divTablaCarrito" class='tablaCarrito'>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <input type="button" value="Hacer Pedido" id="btnPedir" />
+                    <input type="button" value="Vaciar Carrito" id="btnVaciar" />
+                    <input type="button" class="botonCancelar" value="Logout" id="btnLogoutUsuario" alt="Usuario" />
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="pie">
+            Uruguay - 2015
+        </div>
+    </div>
+
+</body>
+<!-- Logo creado con Logomakr.com , utilizando imagenes CC BY 3.0 : 
+	* Humanitarian - by Flaticon from Ochoa
+	** Leafs by Logomark from Undefined
+    -->
+
+</html>

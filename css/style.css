@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+
+/* start commented backslash hack \*/
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+
+/* close commented backslash hack */
+
+body {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+
+#contenedor {
+    width: 960px;
+    background-color: /*#CFCFCF*/
+    #FFFAF0;
+    margin: 0 auto;
+}
+
+#logo {
+    margin: 20px;
+    float: left;
+    width: 86px;
+    height: 80px;
+}
+
+#imgSeleccionada {
+    margin: 20px;
+    /*float: left;*/
+    width: 86px;
+    height: 80px;
+}
+
+#divLoginRegistro {
+    padding: 1px;
+    height: 20px;
+}
+
+#divLoginRegistro a {
+    padding: 50px;
+    height: 200px;
+    vertical-align: middle;
+}
+
+#divLoginRegistro,
+#divUsuarioActivo {
+    float: right;
+    clear: right;
+    padding: 10px 10px 10px 10px;
+    background-color: forestgreen;
+    color: white;
+    margin-right: 20px;
+}
+
+#divUsuarioActivo span {
+    font-weight: bolder;
+    color: navajowhite;
+}
+
+table,
+th,
+td {
+    border: 1px solid green;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1px;
+    background-color: white;
+    table-layout: fixed;
+}
+
+th {
+    background-color: grey;
+    color: white;
+}
+
+td {
+    height: 25px;
+}
+
+a:link,
+a:visited {
+    color: white;
+}
+
+#navPrincipal {
+    float: right;
+    margin-top: 35px;
+    margin-right: 20px;
+}
+
+#navPrincipal li {
+    list-style-type: none;
+    padding: 10px;
+    border: 1px solid #6B6B6B;
+    background-color: #556B2F;
+    margin: 5px;
+    float: left;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+
+#navPrincipal a:link {
+    color: #D9D9D9;
+    text-decoration: none;
+}
+
+#navPrincipal a:visited {
+    color: #FBC155;
+}
+
+#cabezal {
+    background-color: darkolivegreen;
+}
+
+#contenido {
+    background-color: #DFDFDF;
+    /*height: 350px;*/
+    width: 590px;
+    padding: 20px;
+    float: left;
+}
+
+#contenido .liFoto {
+    background-color: grey;
+    height: 150px;
+    /*list-style: none;*/
+    width: 100%;
+}
+
+#contenido img {
+    height: 150px;
+    width: 100%;
+}
+
+.liCodigo {
+    font-weight: bold;
+    background-color: beige;
+    border-radius: 10px;
+    align-content: center;
+    padding: 5px;
+}
+
+.contenedor_Producto {
+    width: 28%;
+    height: 280px;
+    overflow: auto;
+    list-style-type: none;
+    padding: 10px;
+    border: 1px solid #6B6B6B;
+    background-color: darkseagreen;
+    margin: 2px;
+    float: left;
+    display: table-cell;
+    font-size: smaller;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, sans-serif;
+}
+
+.btnAgregarAlCarrito {
+    margin: 5px;
+    padding: 2px;
+}
+
+.contenedor_Producto label {
+    font-weight: lighter;
+    font-style: italic;
+    align-content: left;
+}
+
+#grid_Productos {
+    display: inline-block;
+    float: left;
+}
+
+#divCargaProductos {
+    visibility: /*hidden*/
+}
+
+#divCargaProductos label {
+    display: inline-block;
+    width: 130px;
+}
+
+#divOpcionesAdmin input {
+    margin-bottom: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 300px;
+}
+
+#divCargaProductos label,
+#divCargaProductos input {
+    margin-bottom: 5px;
+    vertical-align: middle;
+}
+
+#divCargaProductos img {
+    margin-bottom: 5px;
+    height: 100px;
+    width: 100px;
+    vertical-align: middle;
+}
+
+#lateral {
+    background-color: #FFFAF0;
+    width: 290px;
+    float: left;
+    padding: 20px;
+}
+
+#lateral label {
+    display: inline-block;
+    width: 110px;
+}
+
+#lateral label,
+#lateral input {
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+#pie {
+    background-color: #F0E68C;
+    clear: both;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
